@@ -1470,7 +1470,7 @@ public class Engine {
 					public boolean accept(File dir, String filename) {
 						String lc = filename.toLowerCase();
 						return (lc.endsWith(".ttf") || lc.endsWith(".otf")
-								|| lc.endsWith(".pfb") || lc.endsWith(".pfa"))
+								|| lc.endsWith(".pfb") || lc.endsWith(".pfa") || lc.endsWith(".ttc"))
 //								&& !filename.endsWith("Fallback.ttf")
 								;
 					}
@@ -1824,6 +1824,7 @@ public class Engine {
 
 	// static initialization
 	static {
+		Log.d("liaowenxin","Engine() : static initialization \n"+ Log.getStackTraceString(new Throwable()));
 		log.i("Engine() : static initialization");
 		installLibrary();
 		initMountRoots();
